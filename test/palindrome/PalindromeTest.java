@@ -9,16 +9,20 @@ public class PalindromeTest {
     }
     
     @Test
-    public void testCheck() {
-        String numberFalse = "998";
-        Palindrome instanceFalse = new Palindrome();
-        boolean expResultFalse = false;
-        boolean resultFalse = instanceFalse.check(numberFalse);
-        assertEquals(expResultFalse, resultFalse);
-        String numberTrue = "999";
-        Palindrome instanceTrue = new Palindrome();
-        boolean expResultTrue = true;
-        boolean resultTrue = instanceTrue.check(numberTrue);
-        assertEquals(expResultTrue, resultTrue);
+    public void testCheckFalse() {
+        String number = "998";
+        Palindrome instance = new Palindrome();
+        boolean expResult = false;
+        boolean result = instance.check(number);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testCheckTrue() {
+        String number = "999";
+        Palindrome instance = new Palindrome();
+        boolean expResult = true;
+        boolean result = instance.check(number);
+        assertEquals(expResult, result);
     }
 }
