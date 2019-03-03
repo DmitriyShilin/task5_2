@@ -10,10 +10,15 @@ public class PalindromeTest {
     
     @Test
     public void testCheck() {
-        String number = "998";
-        Palindrome instance = new Palindrome();
-        boolean expResult = false;
-        boolean result = instance.check(number);
-        assertEquals(expResult, result);
+        String numberFalse = "998";
+        Palindrome instanceFalse = new Palindrome();
+        boolean expResultFalse = false;
+        boolean resultFalse = instanceFalse.check(numberFalse);
+        assertEquals(expResultFalse, resultFalse);
+        String numberTrue = "999";
+        Palindrome instanceTrue = new Palindrome();
+        boolean expResultTrue = true;
+        boolean resultTrue = instanceTrue.check(numberTrue);
+        assertEquals(expResultTrue, resultTrue);
     }
 }
